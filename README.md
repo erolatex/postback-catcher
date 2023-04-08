@@ -37,6 +37,24 @@ go build -o postback-catcher
 ./postback-catcher
 ```
 The server will start on port `8081` by default. You can change the port by modifying the `port` constant in the source code.
+
+## Running with Docker
+
+To run this application using Docker, follow these steps:
+
+1. Make sure you have [Docker](https://www.docker.com/) installed on your system.
+2. Pull the latest image from Docker Hub:
+```bash
+docker pull erolatex/postback-catcher:latest
+```
+3. Run the container with the image, binding the host port to the container port. If you want the application to be accessible on port 80, run the following command:
+```bash
+docker run -d -p 80:8081 --name postback-catcher erolatex/postback-catcher:latest
+```
+This command runs the container with the name "postback-catcher", binds the host's port 80 to the container's port 8081, and uses the image `erolatex/postback-catcher:latest`.
+
+Now, your application should be accessible on your host's port 80. If you need to use a different port, simply replace `80` with the desired port in the `-p` parameter.
+
 ## Usage
 
 ### Send a postback
