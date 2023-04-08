@@ -1,0 +1,31 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+postback-catcher
+
+# Folders
+_vendor/
+bin/
+pkg/
+data/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*~
+
+# Go-specific
+*.exe
+*.test
+*.prof
+*.out
+*.mod
+*.sum
+/go.mod
+/go.sum
+
+# OS-specific
+.DS_Store
+Thumbs.db
