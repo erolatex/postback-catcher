@@ -225,8 +225,7 @@ func main() {
 	r.GET("/test-url", testHandler)
 	r.GET("/health", healthHandler)
 	r.DELETE("/delete/:postback_id", deleteHandler(db))
-	r.Any("/:path", postbackHandler(db))
-	r.Any("/", postbackHandler(db))
+	r.NoRoute(postbackHandler(db))
 
 	if err := r.Run(":" + strconv.Itoa(port)); err != nil {
 		log.Fatalf("failed to start server: %s", err)

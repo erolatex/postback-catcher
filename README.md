@@ -6,7 +6,7 @@ to be easy to use and deploy, requiring minimal configuration.
 ## Features
 
 - Receive postbacks via multiple HTTP methods (GET, POST, PUT, DELETE, etc.)
-- Store postbacks in a BoltDB database
+- Store postbacks in a BBoltDB database
 - Query stored postbacks with customizable limit
 - Delete stored postbacks by ID
 - Test URL redirection with custom headers
