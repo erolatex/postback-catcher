@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/boltdb/bolt"
 	"github.com/gin-gonic/gin"
+	bolt "go.etcd.io/bbolt"
 )
 
 const (
