@@ -11,7 +11,7 @@ COPY . .
 RUN go mod tidy
 
 # Build the application with optimization for Linux Alpine
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o postback-catcher
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=$TARGETARCH go build -a -installsuffix cgo -o postback-catcher
 
 # Use the Alpine base image for the final container
 FROM alpine:latest
