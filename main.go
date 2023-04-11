@@ -25,7 +25,7 @@ type Postback struct {
 	Method string            `json:"method"`
 	URL    string            `json:"url"`
 	ID     string            `json:"id"`
-	Args   map[string]string `json:"args,omitempty"`
+	Args   map[string]string `json:"args"`
 	Body   string            `json:"body,omitempty"`
 }
 
