@@ -110,9 +110,16 @@ func postbackHandler(db *bolt.DB) gin.HandlerFunc {
 			}
 		}
 
+		scheme := "http"
+		if c.Request.TLS != nil {
+			scheme = "https"
+		}
+
+		fullURL := scheme + "://" + c.Request.Host + c.Request.URL.Path
+
 		p := &Postback{
 			Method: c.Request.Method,
-			URL:    c.Request.URL.String(),
+			URL:    fullURL,
 			ID:     filename,
 			Args:   argsMap,
 			Body:   body,
